@@ -1,7 +1,7 @@
-package com.duell.wrappedfy.application.domain.valueobject;
+package com.duell.wrappedfy.application.domain.spotify;
 
 
-public record SpotifyAccount(
+public record SpotifyUserProfile(
         String spotifyId,
         String displayName,
         String email,
