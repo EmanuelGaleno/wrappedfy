@@ -7,9 +7,9 @@ O objetivo é permitir que usuários visualizem seus artistas, músicas e gêner
 ---
 <p align="center">
   <img
-    width="400"
+    width="900"
     alt="Wrappedfy Preview"
-    src="https://github.com/user-attachments/assets/7c89e6ea-26ac-4d5e-a884-251b97d323a1"
+    src="https://github.com/user-attachments/assets/d59bdc22-dd40-46e0-b911-6406433915d7"
   />
 </p>
 
