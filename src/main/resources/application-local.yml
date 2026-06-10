@@ -10,3 +10,8 @@ spring:
 
   flyway:
     enabled: true
+
+spotify:
+  client-id: local
+  client-secret: local
+  redirect-uri: http://localhost:8080/callback
