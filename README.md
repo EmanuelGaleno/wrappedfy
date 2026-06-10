@@ -5,6 +5,15 @@ Aplicação inspirada no Spotify Wrapped que gera estatísticas personalizadas d
 O objetivo é permitir que usuários visualizem seus artistas, músicas e gêneros mais escutados, além de gerar uma experiência compartilhável semelhante ao Spotify Wrapped.
 
 ---
+<p align="center">
+  <img
+    width="400"
+    alt="Wrappedfy Preview"
+    src="https://github.com/user-attachments/assets/7c89e6ea-26ac-4d5e-a884-251b97d323a1"
+  />
+</p>
+
+---
 
 ## 🚀 Tecnologias
 
