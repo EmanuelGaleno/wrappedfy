@@ -12,7 +12,7 @@ O objetivo é permitir que usuários visualizem seus artistas, músicas e gêner
     src="https://github.com/user-attachments/assets/d59bdc22-dd40-46e0-b911-6406433915d7"
   />
 </p>
----
+
 
 ## 🚀 Tecnologias
 
