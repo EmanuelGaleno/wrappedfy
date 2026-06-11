@@ -1,5 +1,6 @@
 package com.duell.wrappedfy.application.controller;
 
+import com.duell.wrappedfy.application.controller.docs.AuthApi;
 import com.duell.wrappedfy.infrastructure.spotify.config.SpotifyProperties;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -15,10 +16,11 @@ import java.net.URI;
 @RestController
 @RequestMapping("/api/auth/spotify")
 @RequiredArgsConstructor
-public class AuthController {
+public class AuthController implements AuthApi {
 
     private final SpotifyProperties spotifyProperties;
 
+    @Override
     @GetMapping("/login")
     public ResponseEntity<Void> login() {
 
@@ -37,10 +39,11 @@ public class AuthController {
                 .build();
     }
 
+    @Override
     @GetMapping("/callback")
-    public String callback(
+    public ResponseEntity<String> callback(
             @RequestParam("code") String code
     ) {
-        return code;
+        return ResponseEntity.ok(code);
     }
 }
