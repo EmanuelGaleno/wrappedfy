@@ -5,11 +5,12 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.web.client.RestClient;
 
 @Configuration
-public class SpotifyClientConfig {
+public class RestClientSpotify {
 
     @Bean
     public RestClient spotifyRestClient() {
         return RestClient.builder()
+                .baseUrl("https://accounts.spotify.com")
                 .build();
     }
 }

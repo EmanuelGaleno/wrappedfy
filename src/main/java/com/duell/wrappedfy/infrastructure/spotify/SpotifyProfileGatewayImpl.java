@@ -1,6 +1,6 @@
 package com.duell.wrappedfy.infrastructure.spotify;
 
-import com.duell.wrappedfy.application.domain.spotify.SpotifyUserProfile;
+import com.duell.wrappedfy.domain.spotify.SpotifyUserProfile;
 import com.duell.wrappedfy.application.gateway.SpotifyProfileGateway;
 import com.duell.wrappedfy.infrastructure.spotify.dto.SpotifyProfileResponse;
 import lombok.RequiredArgsConstructor;

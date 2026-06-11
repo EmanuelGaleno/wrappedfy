@@ -1,4 +1,4 @@
-package com.duell.wrappedfy.application.domain.user;
+package com.duell.wrappedfy.domain.user;
 
 import lombok.Getter;
 import lombok.Builder;
@@ -6,7 +6,7 @@ import lombok.Builder;
 import java.util.UUID;
 import java.time.Instant;
 
-import com.duell.wrappedfy.application.domain.spotify.SpotifyUserProfile;
+import com.duell.wrappedfy.domain.spotify.SpotifyUserProfile;
 
 @Getter
 public class User {

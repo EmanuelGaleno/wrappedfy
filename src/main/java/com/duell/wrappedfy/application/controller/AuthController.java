@@ -1,8 +1,11 @@
 package com.duell.wrappedfy.application.controller;
 
 import com.duell.wrappedfy.application.controller.docs.AuthApi;
+import com.duell.wrappedfy.application.gateway.SpotifyAuthGateway;
+import com.duell.wrappedfy.domain.spotify.SpotifyToken;
 import com.duell.wrappedfy.infrastructure.spotify.config.SpotifyProperties;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,12 +16,14 @@ import org.springframework.web.util.UriComponentsBuilder;
 
 import java.net.URI;
 
+@Slf4j
 @RestController
 @RequestMapping("/api/auth/spotify")
 @RequiredArgsConstructor
 public class AuthController implements AuthApi {
 
     private final SpotifyProperties spotifyProperties;
+    private final SpotifyAuthGateway spotifyAuthGateway;
 
     @Override
     @GetMapping("/login")
@@ -39,11 +44,14 @@ public class AuthController implements AuthApi {
                 .build();
     }
 
-    @Override
     @GetMapping("/callback")
-    public ResponseEntity<String> callback(
+    public ResponseEntity<SpotifyToken> callback(
             @RequestParam("code") String code
     ) {
-        return ResponseEntity.ok(code);
+
+        SpotifyToken token =
+                spotifyAuthGateway.exchangeCodeForToken(code);
+
+        return ResponseEntity.ok(token);
     }
 }

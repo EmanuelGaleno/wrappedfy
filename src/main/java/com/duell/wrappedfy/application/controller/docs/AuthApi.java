@@ -1,5 +1,6 @@
 package com.duell.wrappedfy.application.controller.docs;
 
+import com.duell.wrappedfy.domain.spotify.SpotifyToken;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.tags.Tag;
@@ -24,13 +25,21 @@ public interface AuthApi {
 
     @Operation(
             summary = "Processar retorno da autenticação Spotify",
-            description = "Recebe o código de autorização retornado pelo Spotify após o login do usuário."
+            description = """
+                    Recebe o authorization code retornado pelo Spotify,
+                    realiza a troca por um access token e retorna os dados
+                    de autenticação obtidos junto à Spotify API.
+                    """
     )
     @ApiResponse(
             responseCode = "200",
-            description = "Código de autorização recebido com sucesso"
+            description = "Token Spotify obtido com sucesso"
     )
-    ResponseEntity<String> callback(
+    @ApiResponse(
+            responseCode = "400",
+            description = "Código de autorização inválido"
+    )
+    ResponseEntity<SpotifyToken> callback(
             @RequestParam("code") String code
     );
 }

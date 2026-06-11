@@ -1,6 +1,6 @@
 package com.duell.wrappedfy.application.repository;
 
-import com.duell.wrappedfy.application.domain.user.User;
+import com.duell.wrappedfy.domain.user.User;
 
 import java.util.Optional;
 
