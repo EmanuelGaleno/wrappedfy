@@ -1,4 +1,4 @@
-package com.duell.wrappedfy.application.domain.spotify;
+package com.duell.wrappedfy.domain.spotify;
 
 import lombok.Builder;
 import lombok.Getter;
@@ -8,6 +8,7 @@ import lombok.Getter;
 public class SpotifyToken {
 
     private final String accessToken;
+    private final String tokenType;
     private final String refreshToken;
     private final Long expiresIn;
 }

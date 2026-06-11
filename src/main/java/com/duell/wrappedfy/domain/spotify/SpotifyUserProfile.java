@@ -1,4 +1,4 @@
-package com.duell.wrappedfy.application.domain.spotify;
+package com.duell.wrappedfy.domain.spotify;
 
 
 public record SpotifyUserProfile(
